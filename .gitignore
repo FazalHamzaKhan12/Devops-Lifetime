@@ -10,7 +10,6 @@ __pycache__/
 *.py[cod]
 .DS_Store
 
-
 # Vim temporary files
 .*.sw?
 *.swp
