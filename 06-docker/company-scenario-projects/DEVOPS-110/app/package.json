@@ -1,0 +1,16 @@
+{
+  "name": "devops-110-node-app",
+  "version": "1.0.0",
+  "description": "A simple Node.js web app for multi-stage Docker practice.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
+
