@@ -1,0 +1,28 @@
+2026-10-11 08:00:01.102 [INFO] [main] com.app.ServerStartup - Initializing application context, version v2.4.1-prod
+2026-10-11 08:00:01.450 [INFO] [main] com.app.config.DataSourceConfig - Establishing primary database connection pool (HikariCP)
+2026-10-11 08:00:01.890 [INFO] [main] com.app.config.DataSourceConfig - Database connected successfully: jdbc:postgresql://db.internal:5432/production_db
+2026-10-11 08:00:02.120 [INFO] [main] com.app.cache.RedisClient - Connected to Redis cluster at redis-cluster.cache.internal:6379
+2026-10-11 08:00:02.501 [INFO] [main] com.app.ServerStartup - Application started successfully in 2.398 seconds on port 8080
+2026-10-11 08:05:12.332 [INFO] [http-nio-8080-exec-1] com.app.web.AuthController - User authentication success: userId=40921, ip=192.168.10.45
+2026-10-11 08:12:45.811 [INFO] [http-nio-8080-exec-3] com.app.web.OrderController - Processing checkout orderId=99281, amount=$149.99
+2026-10-11 08:20:00.002 [WARNING] [pool-2-thread-1] com.app.monitor.SystemMonitor - High memory usage detected: Heap utilization at 84.5% (3.38 GB / 4.00 GB)
+2026-10-11 08:35:10.190 [INFO] [http-nio-8080-exec-7] com.app.web.DataController - Fetching bulk analytics dataset for tenant=882
+2026-10-11 08:35:15.422 [WARNING] [http-nio-8080-exec-7] com.app.web.DataController - Response time is slow for endpoint /api/v1/analytics: took 4210ms
+2026-10-11 08:42:01.004 [ERROR] [http-nio-8080-exec-12] com.app.dao.OrderDao - Database connection failed: Connection timeout after 30000ms to db.internal:5432
+2026-10-11 08:42:01.005 [ERROR] [http-nio-8080-exec-12] com.app.web.OrderController - Request failed: POST /api/v1/orders - Internal Server Error
+2026-10-11 08:42:01.512 [INFO] [http-nio-8080-exec-12] com.app.dao.ConnectionPool - Retrying database connection, attempt 1/3...
+2026-10-11 08:42:02.015 [INFO] [http-nio-8080-exec-12] com.app.dao.ConnectionPool - Database reconnected successfully
+2026-10-11 09:00:00.001 [WARNING] [pool-2-thread-1] com.app.monitor.SystemMonitor - High memory usage detected: Heap utilization at 91.2% (3.65 GB / 4.00 GB) - Triggering minor GC
+2026-10-11 09:00:00.412 [INFO] [GC-thread] org.springframework.gc.GarbageCollector - Garbage collection reclaimed 812 MB, current heap: 45%
+2026-10-11 09:15:33.220 [INFO] [http-nio-8080-exec-15] com.app.web.UserController - User profile update: userId=10492
+2026-10-11 09:45:10.890 [WARNING] [http-nio-8080-exec-19] com.app.service.PaymentService - Payment gateway API returned non-standard status: HTTP 429 Too Many Requests
+2026-10-11 09:45:11.390 [INFO] [http-nio-8080-exec-19] com.app.service.PaymentService - Retrying payment request with exponential backoff (delay: 500ms)
+2026-10-11 09:45:11.902 [INFO] [http-nio-8080-exec-19] com.app.service.PaymentService - Payment gateway request succeeded on retry
+2026-10-11 10:00:00.003 [WARNING] [pool-2-thread-1] com.app.monitor.SystemMonitor - Disk space warning: /var/log/app partition is at 88% capacity (free: 4.2 GB)
+2026-10-11 10:30:22.112 [ERROR] [http-nio-8080-exec-22] com.app.security.JwtFilter - Invalid JWT token provided: signature verification failed for token header prefix eyJhbGciOiJIUzI1Ni...
+2026-10-11 10:30:22.113 [WARNING] [http-nio-8080-exec-22] com.app.security.JwtFilter - Rejecting unauthorized request to /api/v1/admin/settings: HTTP 401 Unauthorized
+2026-10-11 11:00:01.002 [INFO] [main] com.app.scheduler.ReportJob - Scheduled background job 'DailyMetricsSync' started
+2026-10-11 11:00:04.580 [INFO] [main] com.app.scheduler.ReportJob - Scheduled background job 'DailyMetricsSync' completed successfully in 3578ms
+2026-10-11 11:58:50.102 [INFO] [Thread-Shutdown] com.app.cache.RedisClient - Closing Redis connection pool gracefully
+2026-10-11 11:58:50.450 [INFO] [Thread-Shutdown] com.app.config.DataSourceConfig - Closing database connection pool
+2026-10-11 11:58:50.890 [INFO] [Thread-Shutdown] com.app.ServerStartup - Application stopped cleanly
